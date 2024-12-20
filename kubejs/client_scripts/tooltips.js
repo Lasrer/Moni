@@ -122,12 +122,11 @@ ItemEvents.tooltip(tooltip => {
         'atmospheric_accumulator',
         'matter_alterator',
         'implosion_collider',
-        'extra_large_chemical_reactor',
         'quintessence_infuser',
         'hyperbolic_microverse_projector',
         'dimensional_superassembler',
         'universal_crystallizer',
-        'biobalance_charger'
+        'sculk_biocharger'
     ]
 
     parallelMultis.forEach(multi => {

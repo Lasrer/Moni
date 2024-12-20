@@ -24,7 +24,7 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
     event.create('omnium').parent(GTMaterialIconSet.SHINY)
     event.create('sculk_alloy').parent(GTMaterialIconSet.DULL)
     event.create('infinity').parent(GTMaterialIconSet.SHINY)
-    event.create('uru').parent(GTMaterialIconSet.SHINY)
+    event.create('eltz').parent(GTMaterialIconSet.SHINY)
     event.create('monium').parent(GTMaterialIconSet.SHINY)
 })
 
@@ -66,7 +66,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x4C484C)
         .iconSet('dull')
         .cableProperties(GTValues.V[GTValues.UEV], 16, 0, true)
-        .fluidPipeProperties(120000, 96000, true, true, true, true)
+        .fluidPipeProperties(11000, 8500, true, false, true, true)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SPRING)
 
     event.create('sculk_bioalloy')
@@ -86,7 +86,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ingot()
         .element(GTElements.get('eltz'))
         .color(0xffffff)
-        .iconSet('uru')
+        .iconSet('eltz')
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.PHOSPHORESCENT)
        
     event.create('eltic_actinate')

@@ -128,17 +128,13 @@
   "gtceu.greenhouse": "Greenhouse",
   "gtceu.multiblock.greenhouse.description": "§7A high powered UV ray chamber, capable of mass-growing even the most incomprehensible plants",
 
-  "block.gtceu.extra_large_chemical_reactor": "Extra Large Chemical Reactor",
-  "gtceu.extra_large_chemical_reactor": "Extra Large Chemical Reactor",
-  "gtceu.multiblock.extra_large_chemical_reactor.description": "§7Performs all kinds of chemical reactions at a rate and efficiency previously thought impossible.",
-
   "block.gtceu.discharger": "Discharger",
   "gtceu.discharger": "Dischargement",
   "gtceu.multiblock.discharger.description": "§7Discharges a massive amount of energy to perform recipes",
 
-  "block.gtceu.biobalance_charger": "Biobalance Charger",
+  "block.gtceu.sculk_biocharger": "Sculk Biocharger",
   "gtceu.charger": "Advanced Sculk Charging",
-  "gtceu.multiblock.biobalance_charger.description": "§7A Balance Charger, capable of both Charging and Discharging",
+  "gtceu.multiblock.sculk_biocharger.description": "§7A Balance Charger, capable of both Charging and Discharging",
 
 
   "block.gtceu.implosion_collider": "Implosion Collider",
@@ -455,8 +451,14 @@
   "material.gtceu.hyperdegenerate_matter":"Hyperdegenerate Matter",
   "material.gtceu.exotic_particle_solution": "Exotic Particle Solution",
 
+  "__Terbium__.header": "=================",
+  "__Terbium__.flufff": ">    Terbium    <",
+  "__Terbium__.footer": "=================",
 
-
+  "material.gtceu.ammonium_oxalate": "Ammonium Oxalate",
+  "material.gtceu.ammonium_nitrate": "Ammonium Nitrate",
+  "material.gtceu.thorium_hydroxite": "Thorium Hydroxite",
+  "material.gtceu.magnetic_terbium": "Magnetic Terbium",
 
   "__MISC__.header": "=========",
   "__MISC__.flufff": "> Misc. <",

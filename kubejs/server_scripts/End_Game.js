@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:uranium_hexafluoride 1000')
         .chancedInput('gtceu:neutron_reflector', 100, 0)
         .outputFluids('gtceu:enriched_uranium_hexafluoride 50', 'gtceu:depleted_uranium_hexafluoride 450', 'gtceu:fluorine 800')
-        .chancedOutput('gtceu:small_actinium_dust', 100, 500)
+        .chancedOutput('gtceu:small_actinium_dust', 1000, 400)
         .duration(160)
         .EUt(GTValues.VHA[GTValues.ZPM])
 
@@ -36,16 +36,6 @@ ServerEvents.recipes(event => {
             .EUt(1200000)
         )
     }
-
-
-    // Extra Large Chemical Reactor
-    event.recipes.gtceu.assembly_line('extra_large_chemical_reactor')
-        .itemInputs('gtceu:large_chemical_reactor', "8x gtceu:naquadah_large_fluid_pipe", '8x gtceu:luv_hermetic_casing', '4x gtceu:luv_field_generator', '8x gtceu:luv_electric_pump', '8x gtceu:luv_fluid_regulator', '4x #gtceu:circuits/zpm')
-        .inputFluids('gtceu:soldering_alloy 1152', 'gtceu:polybenzimidazole 1152')
-        .itemOutputs('gtceu:extra_large_chemical_reactor')
-        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack('gtceu:large_chemical_reactor').EUt(7680).duration(600))
-        .duration(1200)
-        .EUt(131072)
 
     // Blacklight
     event.shaped(
