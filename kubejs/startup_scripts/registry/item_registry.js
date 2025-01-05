@@ -146,6 +146,7 @@ StartupEvents.registry('item', event => {
 
     // Endgame Items
     event.create('diamond_lattice')
+    event.create('neutron_emitter')
     event.create('ultimate_gem').displayName("§dUltimate Gem").glow(true)
     event.create('mote_of_omnium').displayName("Mote of Omnium").glow(true).rarity("epic")
     event.create('heart_of_a_universe').displayName("§dHeart Of A Universe")
@@ -357,7 +358,7 @@ StartupEvents.registry('item', event => {
     event.create('unsintered_naquadah_fuel_pellet').texture('kubejs:item/naquadah/unsintered_naquadah_fuel_pellet')
     event.create('depleted_naquadah_fuel_pellet').texture('kubejs:item/naquadah/depleted_naquadah_fuel_pellet')
     event.create('naquadah_fuel_dust').texture('kubejs:item/naquadah/naquadah_fuel_dust')
-    event.create('raw_naquadah_fuel_dust').texture('kubejs:item/naquadah/raw_naquadah_fuel_dust')
+    event.create('naquadah_fuel_primer_dust').texture('kubejs:item/naquadah/naquadah_fuel_primer_dust')
     event.create('naquadah_waste').texture('kubejs:item/naquadah/naquadah_waste')
     event.create('inactivated_naquadah_fuel_dust').texture('kubejs:item/naquadah/inactivated_naquadah_fuel_dust')
     event.create('depleted_naquadah_fuel_dust').texture('kubejs:item/naquadah/depleted_naquadah_fuel_dust')
