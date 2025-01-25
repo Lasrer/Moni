@@ -7,7 +7,7 @@ StartupEvents.registry('item', event => {
 
     // Regular Microminers
     for (let index = 1; index <= 12; index++) {
-        event.create('microminer_t' + index).maxStackSize(16).texture('kubejs:item/microverse/microminer_t' + index)
+        event.create(`microminer_t${index}`).maxStackSize(16).texture(`kubejs:item/microverse/microminer_t${index}`)
     }
 
 
@@ -34,9 +34,9 @@ StartupEvents.registry('item', event => {
 
     if (!isNormalMode) {
         for (const [tier, color] of pristine_matter) {
-            event.create('stabilized_microminer_t' + tier)
+            event.create(`stabilized_microminer_t${tier}`)
                 .maxStackSize(16)
-                .texture('kubejs:item/microverse/microminer_t' + tier)
+                .texture(`kubejs:item/microverse/microminer_t${tier}`)
                 .glow(true);
             event.create(`pristine_matter_t${tier}`)
                 .textureJson({ layer0: 'kubejs:item/prediction' })
@@ -404,14 +404,12 @@ StartupEvents.registry('item', event => {
 
 
     //Eltz metal processing intermediate products
-    event.create('reactive_dust_mixture').texture('kubejs:item/eltz/reactive_dust_mixture')
+    event.create('reactive_dust_mixture').textureJson({ layer0: 'kubejs:item/eltz/reactive_dust_mixture_base', layer1: 'kubejs:item/eltz/reactive_dust_mixture_overlay' })
     event.create('inert_dust_mixture').texture('kubejs:item/eltz/inert_dust_mixture')
     event.create('dusty_inert_powder').texture('kubejs:item/eltz/dusty_inert_powder')
-    event.create('centrifuged_inert_powder').texture('kubejs:item/eltz/centrifuged_inert_powder')
     event.create('shiny_powder_mixture').texture('kubejs:item/eltz/shiny_powder_mixture')
     event.create('shiny_metal_powder').texture('kubejs:item/eltz/shiny_metal_powder')
     event.create('inert_clumps').texture('kubejs:item/eltz/inert_clumps')
-    event.create('saturated_inert_clumps').texture('kubejs:item/eltz/saturated_inert_clumps')
     event.create('clean_inert_cluster').texture('kubejs:item/eltz/clean_inert_cluster')
     event.create('eltic_crystal_seed').texture('kubejs:item/eltz/eltic_crystal_seed')
 
@@ -516,10 +514,10 @@ StartupEvents.registry('item', event => {
     //Universal Circuits
     const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv"]
     tiers.forEach((universal_circuit) => {
-        event.create(universal_circuit + "_universal_circuit")
-            .tag("gtceu:circuits/" + universal_circuit)
+        event.create(`${universal_circuit}_universal_circuit`)
+            .tag(`gtceu:circuits/${universal_circuit}`)
             .tag("gtceu:circuits/universal")
-            .displayName(universal_circuit.toUpperCase() + " Universal Circuit")
+            .displayName(`${universal_circuit.toUpperCase()} Universal Circuit`)
             .tooltip("§7A Universal Circuit")
             .textureJson({ layer0: `kubejs:item/circuits/universal/${universal_circuit}_universal_circuit` })
     })
