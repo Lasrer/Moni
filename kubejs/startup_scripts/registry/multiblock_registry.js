@@ -302,7 +302,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .machine((holder) => new FusionReactorMachine(holder, GTValues.UHV))
             .rotationState(RotationState.ALL)
             .recipeTypes(GTRecipeTypes.FUSION_RECIPES)
-            .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+            .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, MachineModifiers.FUSION_REACTOR])
             .appearanceBlock(GCYMBlocks.CASING_ATOMIC)
             .pattern(definition => FactoryBlockPattern.start()
                 .aisle("#######################", "#######################", "#######################", "###F##F#N#####N#F##F###", "###FNNFNN#####NNFNNF###", "###F##F#N#####N#F##F###", "#######################", "#######################", "#######################")
@@ -325,7 +325,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMinGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                     .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))
-                .where('D', Predicates.blocks(GTBlocks.FUSION_CASING_MK3.get()))
+                .where('D', Predicates.blocks("kubejs:bioalloy_fusion_casing"))
                 .where('F', Predicates.blocks("kubejs:omnic_matrix_coil_block"))
                 .where('T', Predicates.blocks(GTBlocks.COIL_TRITANIUM.get()))
                 .where('N', Predicates.frames(GTMaterials.get('activated_netherite')))
@@ -680,6 +680,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])    //Fix for generator "overclocking" as long as the actual hatch invalidates the structure
         .appearanceBlock(GCYMBlocks.CASING_REACTION_SAFE)
         .generator(true)
+        .regressWhenWaiting(false)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("CCC", "PGP", "PGP", "PGP", "PGP", "CCC")
             .aisle("CCC", "GNG", "GNG", "GNG", "GNG", "CCC")
@@ -699,6 +700,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('large_naquadah_reactor')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])    //Fix for generator "overclocking" as long as the actual hatch invalidates the structure
+        .regressWhenWaiting(false)
         .appearanceBlock(GCYMBlocks.CASING_ATOMIC)
         .generator(true)
         .pattern(definition => FactoryBlockPattern.start()
